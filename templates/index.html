@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>atms index</title>
 </head>
-<h1>Automated Teller Machine Management System</h1>
 <body>
-<ul>
-    {% for atm in atms %}
-        <li><a href="/atm/{{ atm.id }}">{{ atm }}</a></li>
-    {% endfor %}
-</ul>
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        Automated Teller Machine Management System
+    </div>
+    <ul class="list-group list-group-flush">
+        {% for atm in atms %}
+        <li class="list-group-item"><a href="/atm/{{ atm.id }}">{{ atm.id }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
 </body>
 </html>

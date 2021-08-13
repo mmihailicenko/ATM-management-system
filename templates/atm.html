@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Automated Teller Machine {{ atm.id }}</title>
 </head>
 <body>
-<h1>Automated Teller Machine {{ atm.id }}</h1>
-<ul>
-    <li>Address: {{ atm["location"] }}</li>
-    <li>Belongs to: {{ atm["name"] }}</li>
-    <li>Blocked status: {{ atm["blocked"] }}</li>
-</ul>
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        Automated Teller Machine {{ atm.id }}
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Address: {{ atm["location"] }}</li>
+        <li class="list-group-item">Belongs to: {{ atm["name"] }}</li>
+        <li class="list-group-item">Blocked status: {{ atm["blocked"] }}</li>
+    </ul>
+</div>
 </body>
 </html>
