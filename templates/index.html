@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>atms index</title>
+</head>
+<h1>Automated Teller Machine Management System</h1>
+<body>
+<ul>
+    {% for atm in atms %}
+        <li><a href="/atm/{{ atm.id }}">{{ atm }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>

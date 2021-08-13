@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automated Teller Machine {{ atm.id }}</title>
+</head>
+<body>
+<h1>Automated Teller Machine {{ atm.id }}</h1>
+<ul>
+    <li>Address: {{ atm["location"] }}</li>
+    <li>Belongs to: {{ atm["name"] }}</li>
+    <li>Blocked status: {{ atm["blocked"] }}</li>
+</ul>
+</body>
+</html>
