@@ -38,19 +38,19 @@ def fetch_atms():
         return []
 
 
-def fetch_atm(id: str):
+def fetch_atm(atm_id: str):
     try:
         with SQLite('application.db') as cur:
 
             # execute the query and fetch the data
-            cur.execute(f"SELECT * FROM atms where id=?", [id])
+            cur.execute(f"SELECT * FROM atms where id=?", [atm_id])
             result = cur.fetchone()
 
             # return the result or raise an error
             if result is None:
-                raise NotFoundError(f'Unable to find blog with id {id}.')
+                raise NotFoundError(f'Unable to find blog with id {atm_id}.')
 
             data = atms_list_to_json(result)
             return data
     except sqlite3.OperationalError:
-        raise NotFoundError(f'Unable to find blog with id {id}.')
+        raise NotFoundError(f'Unable to find blog with id {atm_id}.')
